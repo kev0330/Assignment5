@@ -14,5 +14,5 @@ Run the test by simply running the test class located in Assignment5-Assignment6
 IntelliH IDEA - Java
 
 #### Class Diagram
-https://github.com/kev0330/Assignment5-Assignment6/blob/master/Assignments/src/Class%20Diagram.png
+https://github.com/kev0330/Assignment5-Assignment6/blob/master/Assignments/src/Class%20Diagram.png (14 Classes created so far)
 
