@@ -3,24 +3,24 @@ package cput.ac.za.model;
 
 public class Market {
 
-    private String marketID;
+    private String marketNum;
 
     private Market(){}
 
     private Market(Builder builder){
-        this.marketID = builder.marketID;
+        this.marketNum = builder.marketNum;
     }
 
     public String getMarketID() {
-        return marketID;
+        return marketNum;
     }
 
     public static class Builder{
 
-        private String marketID;
+        private String marketNum;
 
-        public Builder marketID(String marketID){
-            this.marketID = marketID;
+        public Builder marketNum(String marketNum){
+            this.marketNum = marketNum;
             return this;
         }
 
@@ -31,7 +31,7 @@ public class Market {
 
         @Override
         public String toString() {
-            return "Market ID :" + marketID;
+            return "Market ID :" + marketNum;
         }
 
 
