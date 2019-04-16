@@ -11,7 +11,7 @@ public class Market {
         this.marketNum = builder.marketNum;
     }
 
-    public String getMarketID() {
+    public String getMarketNum() {
         return marketNum;
     }
 
