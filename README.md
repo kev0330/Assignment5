@@ -1,5 +1,5 @@
 ### Stock Taking System
-This project is created to assist stock counting in the flea market, since all systems taking in place of the flea market are paper based, mistakes will be easily made and errors could occure. 
+This project is created to assist stock counting in the flea market, this will include the stock that are sold per day and stock that are in the storage, since all systems taking in place of the flea market are paper based, mistakes will be easily made and errors could occure. 
 
 #### Getting Started
 Simply download and run the project using any platform which can run java coding.
