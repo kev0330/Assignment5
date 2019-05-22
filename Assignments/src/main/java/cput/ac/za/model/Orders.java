@@ -1,9 +1,9 @@
-package cput.ac.za.model;
+package cput.ac.za.domain.admin;
 
 
 public class Orders {
 
-    private int orderNum;
+    private String orderNum;
 
     private Orders(){}
 
@@ -12,16 +12,21 @@ public class Orders {
 
     }
 
-    public int getOrderNum() {
+    public String getOrderNum() {
         return orderNum;
     }
 
     public static class Builder{
 
-        private int orderNum;
+        private String orderNum;
 
-        public Builder Orders(int orderNum){
+        public Builder Orders(String orderNum){
             this.orderNum = orderNum;
+            return this;
+        }
+
+        public Orders.Builder copy(Orders orders){
+            this.orderNum = orders.orderNum;
             return this;
         }
 
@@ -29,13 +34,14 @@ public class Orders {
             return new Orders(this);
         }
 
-        @Override
-        public String toString() {
-            return "Order :" + orderNum;
-        }
 
 
 
 
     }
+    @Override
+    public String toString() {
+        return "Order :" + orderNum;
+    }
+
 }

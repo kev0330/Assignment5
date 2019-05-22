@@ -1,4 +1,4 @@
-package cput.ac.za.model;
+package cput.ac.za.domain.admin;
 
 
 public class Market {
@@ -19,23 +19,29 @@ public class Market {
 
         private String marketNum;
 
-        public Builder marketNum(String marketNum){
+        public Builder market(String marketNum){
             this.marketNum = marketNum;
             return this;
         }
 
+        public Market.Builder copy(Market market){
+            this.marketNum = market.marketNum;
+            return this;
+        }
 
         public Market build() {
             return new Market(this);
         }
 
-        @Override
-        public String toString() {
-            return "Market ID :" + marketNum;
-        }
 
 
 
 
     }
+
+    @Override
+    public String toString() {
+        return "Market ID :" + marketNum;
+    }
+
 }

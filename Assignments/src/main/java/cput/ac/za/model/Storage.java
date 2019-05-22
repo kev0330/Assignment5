@@ -1,9 +1,9 @@
-package cput.ac.za.model;
+package cput.ac.za.domain.admin;
 
 
 public class Storage {
 
-    private int storageNum;
+    private String storageNum;
 
     private Storage(){}
 
@@ -12,16 +12,21 @@ public class Storage {
 
     }
 
-    public int getStorageNum() {
+    public String getStorageNum() {
         return storageNum;
     }
 
     public static class Builder{
 
-        private int storageNum;
+        private String storageNum;
 
-        public Builder Storage(int storageNum){
+        public Builder Storage(String storageNum){
             this.storageNum = storageNum;
+            return this;
+        }
+
+        public Storage.Builder copy(Storage storage){
+            this.storageNum = storage.storageNum;
             return this;
         }
 
@@ -29,13 +34,14 @@ public class Storage {
             return new Storage(this);
         }
 
-        @Override
-        public String toString() {
-            return "Storage :" + storageNum;
-        }
 
 
 
 
     }
+    @Override
+    public String toString() {
+        return "Storage :" + storageNum;
+    }
+
 }

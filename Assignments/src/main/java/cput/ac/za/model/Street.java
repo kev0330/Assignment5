@@ -1,9 +1,9 @@
-package cput.ac.za.model;
+package cput.ac.za.domain.admin;
 
 
 public class Street {
 
-    private int streetNum;
+    private String streetNum;
 
     private Street(){}
 
@@ -12,16 +12,21 @@ public class Street {
 
     }
 
-    public int getStreetNum() {
+    public String getStreetNum() {
         return streetNum;
     }
 
     public static class Builder{
 
-        private int streetNum;
+        private String streetNum;
 
-        public Builder streetNum(int streetNum){
+        public Builder streetNum(String streetNum){
             this.streetNum = streetNum;
+            return this;
+        }
+
+        public Street.Builder copy(Street street){
+            this.streetNum = street.streetNum;
             return this;
         }
 
@@ -29,13 +34,15 @@ public class Street {
             return new Street(this);
         }
 
-        @Override
-        public String toString() {
-            return "Street Number :" + streetNum;
-        }
 
 
 
 
+
+    }
+
+    @Override
+    public String toString() {
+        return "Street Number :" + streetNum;
     }
 }

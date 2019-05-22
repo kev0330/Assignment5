@@ -1,5 +1,7 @@
-package cput.ac.za.model;
+package cput.ac.za.domain.admin;
 
+
+import java.util.Objects;
 
 public class City {
 
@@ -20,22 +22,27 @@ public class City {
 
         private String cityName;
 
-        public Builder marketID(String cityName){
+        public Builder cityName(String cityName){
             this.cityName = cityName;
             return this;
         }
 
-        public Market build() {
-            return new Market(this);
+        public Builder copy(City city){
+            this.cityName = city.cityName;
+            return this;
         }
 
-        @Override
-        public String toString() {
-            return "City Name :" + cityName;
+        public City build() {
+            return new City(this);
         }
-
-
 
 
     }
+
+    @Override
+    public String toString() {
+        return "City Name :" + cityName;
+    }
+
 }
+

@@ -1,9 +1,9 @@
-package cput.ac.za.model;
+package cput.ac.za.domain.admin;
 
 
 public class Store {
 
-    private int storeNum;
+    private String storeNum;
 
     private Store(){}
 
@@ -12,16 +12,21 @@ public class Store {
 
     }
 
-    public int getStoreNum() {
+    public String getStoreNum() {
         return storeNum;
     }
 
     public static class Builder{
 
-        private int storeNum;
+        private String storeNum;
 
-        public Builder Store(int storeNum){
+        public Builder Store(String storeNum){
             this.storeNum = storeNum;
+            return this;
+        }
+
+        public Store.Builder copy(Store store){
+            this.storeNum = store.storeNum;
             return this;
         }
 
@@ -29,13 +34,14 @@ public class Store {
             return new Store(this);
         }
 
-        @Override
-        public String toString() {
-            return "Store :" + storeNum;
-        }
 
 
 
 
     }
+    @Override
+    public String toString() {
+        return "Store :" + storeNum;
+    }
+
 }

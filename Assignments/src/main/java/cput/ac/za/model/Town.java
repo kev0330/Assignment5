@@ -1,4 +1,4 @@
-package cput.ac.za.model;
+package cput.ac.za.domain.admin;
 
 
 public class Town {
@@ -25,17 +25,24 @@ public class Town {
             return this;
         }
 
+        public Town.Builder copy(Town town){
+            this.townName = town.townName;
+            return this;
+        }
+
         public Town build() {
             return new Town(this);
         }
 
-        @Override
-        public String toString() {
-            return "Town Name :" + townName;
-        }
 
 
 
 
+
+    }
+
+    @Override
+    public String toString() {
+        return "Town Name :" + townName;
     }
 }

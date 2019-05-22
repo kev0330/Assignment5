@@ -1,9 +1,9 @@
-package cput.ac.za.model;
+package cput.ac.za.domain.admin;
 
 
 public class Item {
 
-    private int itemNum;
+    private String itemNum;
 
     private Item(){}
 
@@ -12,16 +12,21 @@ public class Item {
 
     }
 
-    public int getItemNum() {
+    public String getItemNum() {
         return itemNum;
     }
 
     public static class Builder{
 
-        private int itemNum;
+        private String itemNum;
 
-        public Builder Item(int itemNum){
+        public Builder Item(String itemNum){
             this.itemNum = itemNum;
+            return this;
+        }
+
+        public Item.Builder copy(Item item){
+            this.itemNum = item.itemNum;
             return this;
         }
 
@@ -29,13 +34,10 @@ public class Item {
             return new Item(this);
         }
 
-        @Override
-        public String toString() {
-            return "Item :" + itemNum;
-        }
+    }
 
-
-
-
+    @Override
+    public String toString() {
+        return "Item :" + itemNum;
     }
 }

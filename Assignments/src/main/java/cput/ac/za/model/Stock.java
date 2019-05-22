@@ -1,9 +1,9 @@
-package cput.ac.za.model;
+package cput.ac.za.domain.admin;
 
 
 public class Stock {
 
-    private int stockNum;
+    private String stockNum;
 
     private Stock(){}
 
@@ -12,16 +12,21 @@ public class Stock {
 
     }
 
-    public int getStockNum() {
+    public String getStockNum() {
         return stockNum;
     }
 
     public static class Builder{
 
-        private int stockNum;
+        private String stockNum;
 
-        public Builder Storage(int stockNum){
+        public Builder Stock(String stockNum){
             this.stockNum = stockNum;
+            return this;
+        }
+
+        public Stock.Builder copy(Stock stock){
+            this.stockNum = stock.stockNum;
             return this;
         }
 
@@ -29,13 +34,14 @@ public class Stock {
             return new Stock(this);
         }
 
-        @Override
-        public String toString() {
-            return "Stock :" + stockNum;
-        }
-
-
 
 
     }
+    @Override
+    public String toString() {
+        return "Stock :" + stockNum;
+    }
+
+
+
 }
